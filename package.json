@@ -1,10 +1,14 @@
 {
   "name": "ssb-neon-ref",
   "version": "2.14.2",
-  "description": "",
+  "description": "Rust-in-Node.js variant of ssb-ref",
   "main": "lib/index.js",
   "author": "Andre Staltz <andre@staltz.com>",
-  "license": "MIT",
+  "license": "AGPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/staltz/ssb-neon-ref.git"
+  },
   "dependencies": {
     "neon-cli": "~0.4.2"
   },
