@@ -1,0 +1,25 @@
+{
+  "name": "ssb-neon-ref",
+  "version": "2.14.2",
+  "description": "",
+  "main": "lib/index.js",
+  "author": "Andre Staltz <andre@staltz.com>",
+  "license": "MIT",
+  "dependencies": {
+    "neon-cli": "~0.4.2"
+  },
+  "devDependencies": {
+    "cpy-cli": "^3.1.1",
+    "ssb-ref": "2.14.2",
+    "tape": "^5.0.1"
+  },
+  "scripts": {
+    "build-debug": "neon build",
+    "build-release": "neon build --release",
+    "pretest": "npm run build-debug",
+    "setup-compat-tests": "cpy ./node_modules/ssb-ref/test/* ./test-compat",
+    "test-compat": "npm run setup-compat-tests && tape test-compat/*.js",
+    "test-extra": "tape test-extra/*.js",
+    "test": "npm run test-compat && npm run test-extra"
+  }
+}
